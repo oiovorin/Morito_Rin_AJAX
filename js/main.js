@@ -64,13 +64,18 @@
   function loadMaterialInfo() {
 
     //Add loader in HTML, write code to show it here
+      const loader = document.querySelector("#loader");
+      loader.style.display = "block";
 
     //make AJAX Call here
-
+    fetch("https://swiftpixel.com/earbud/api/materials")    
      //this is the api url https://swiftpixel.com/earbud/api/materials"
 
+    .then(response => response.json())
+    .then(materials => {
+      console.log(materials);
 
-    materialListData.forEach(material => {
+      materials.forEach(material => {
       // clone the template li with h3 and p inside
       const clone = materialTemplate.content.cloneNode(true);
       // populate the cloned template
@@ -81,10 +86,18 @@
       materialDescription.textContent = material.description;
 
       //Hide the loader
+      loader.style.display = "none";
 
       //Append the populated template to the list
       materialList.appendChild(clone);
+    });
+
     })
+    .catch(error => {
+      console.log(error);
+    });
+
+
   }
   loadMaterialInfo();
 
