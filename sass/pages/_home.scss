@@ -15,7 +15,7 @@
     ul#material-list {
         list-style: none;
         padding-left: 0;
-        margin: 20px auto;
+        margin: 20px auto 100px auto;
     
         li {
             background-color: pink;
@@ -37,7 +37,73 @@
             }
         }
     }
-    
+
+p.error-message {
+    background-color: rgb(219, 219, 219);
+    border: 2px solid red;
+    text-align: center;
+    padding: 50px;
+    height: 150px;
+    width: 350px;
+    margin: 20px auto;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-40%, -50%);
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    14% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    28% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    42% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    56% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    84% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+}
+
+p.material-error-message {
+    background-color: rgb(219, 219, 219);
+    border: 2px solid red;
+    text-align: center;
+    padding: 50px;
+    height: 150px;
+    width: 350px;
+    margin: 20px auto;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-100%, -50%);
+    animation: bounce 1.5s ease-in-out infinite;
+}
     @media screen and (min-width:768px) {
         ul#material-list {
             display: flex;
