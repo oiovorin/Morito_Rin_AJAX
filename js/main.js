@@ -119,5 +119,6 @@
     hotspot.addEventListener("mouseleave", hideInfo);
   });
 
+
 })();
 
